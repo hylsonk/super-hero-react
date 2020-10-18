@@ -10,19 +10,25 @@ export const Table = ({
     body,
     footer
 }) => {
-    return (
-        <table class="table">
-            <TableHead
-                columns={head}
-            />
-            <TableBody
-                rows={body}
-            />
-            <TableFooter
-                columns={footer}
-            />
-        </table>
-    )
+    if(body.length > 0) {
+        return (
+            <table class="table">
+                <TableHead
+                    columns={head}
+                />
+                <TableBody
+                    rows={body}
+                />
+                <TableFooter
+                    columns={footer}
+                />
+            </table>
+        )
+    } else {
+        return (
+            'nada a exibir'
+        )
+    }
 }
 
 export default Table;
