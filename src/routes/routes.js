@@ -1,7 +1,8 @@
-import React from "react"
-import { BrowserRouter as Router } from "react-router-dom"
-import { Table } from '../components/organisms'
-import { columnsChracter } from '../utils/constants'
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Table } from '../components/organisms';
+import { columnsChracter } from '../utils/constants';
+import api from '../services/api';
 
 export default function App() {
 
@@ -153,6 +154,9 @@ export default function App() {
           }
         }
     ]
+    
+    load()
+    
 
     return (
         <Router>
@@ -164,5 +168,13 @@ export default function App() {
             />
         </Router>
     )
+}
+
+export const load = () =>{
+    api.get('70')
+        .then((response) => console.log(response))
+        .catch((err) => {
+            console.error(err);
+        });
 }
 
