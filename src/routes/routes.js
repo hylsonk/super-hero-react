@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Table } from '../components/organisms';
 import { columnsChracter } from '../utils/constants';
 import api from '../services/api';
+import { InputSearch } from '../components/molecules';
 
 export default function App() {
 
@@ -160,6 +161,7 @@ export default function App() {
 
     return (
         <Router>
+            <InputSearch/>
             <Table 
                 head={columnsChracter}
                 body={
