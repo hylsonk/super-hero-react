@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
 import { Table } from '../components/organisms'
+import { columnsChracter } from '../utils/constants'
 
 export default function App() {
 
@@ -156,13 +157,10 @@ export default function App() {
     return (
         <Router>
             <Table 
-                head={
-                    [`id`, `name`]
-                }
+                head={columnsChracter}
                 body={
                     mock.map(char=>([char.id, char.name]))
                 }
-                footer={[]}
             />
         </Router>
     )

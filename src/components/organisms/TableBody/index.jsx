@@ -6,8 +6,10 @@ export const TableBody = ({rows}) => {
 
     return (
         <tbody>
-            {rows.map(row => (
+            {rows.map((row, index) => (
                 <TableRow
+                    key={index}
+                    id={row[0]}
                     type={RowTypes.BODY_ROW}
                     columns={row}
                 />

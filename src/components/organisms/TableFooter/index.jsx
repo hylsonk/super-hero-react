@@ -2,7 +2,7 @@ import React from 'react';
 import { TableRow } from '../../molecules/';
 import RowTypes from '../../molecules/TableRow/config';
 
-export const TableFooter = ({columns}) => {
+export const TableFooter = ({columns = []}) => {
 
     return (
         <tfoot>

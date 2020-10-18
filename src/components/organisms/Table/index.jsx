@@ -12,7 +12,7 @@ export const Table = ({
 }) => {
     if(body.length > 0) {
         return (
-            <table class="table">
+            <table className="table">
                 <TableHead
                     columns={head}
                 />
