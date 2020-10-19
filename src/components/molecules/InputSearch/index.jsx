@@ -1,17 +1,26 @@
 import React from 'react';
-import { Input } from '../../atoms';
+import { Input, Button } from '../../atoms';
 import { labels } from '../../../utils/labels';
 
-export const InputSearch = ({value, action, id, className}) => {
+export const InputSearch = ({value, onChange, id, className,label, onClick, disabled, classNameButton}) => {
     return(
-        <Input 
-            type='text'
-            placeholder={labels.search}
-            action= {action}
-            id={id}
-            className={className}
-            value={value}
-        />
+        <div>
+            <Input 
+                type='text'
+                placeholder={labels.search}
+                onChange= {onChange}
+                id={id}
+                className={className}
+                value={value}
+            />
+            <Button 
+                onClick={onClick}
+                disabled={disabled}
+                className={classNameButton}
+                label={label}
+            />
+        </div>
+        
     )
 }
 

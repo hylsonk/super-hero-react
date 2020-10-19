@@ -167,9 +167,11 @@ export const ChracterList = () => {
     return(
         <div className='container'>
             <InputSearch
-                action={e => setSearchValue(e.target.value)}
+                onChange={e => setSearchValue(e.target.value)}
                 id='search'
                 value={searchValue}
+                label="Search"
+                onClick={e=> console.log('CLICK')}
             />
             <Table
                 head={columnsChracter}
