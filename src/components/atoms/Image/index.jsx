@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Image = ({url, className}) => {
     return (
-        <figure class={className}>
-            <img src={url}/>
+        <figure className={className}>
+            <img src={url} alt={url}/>
         </figure>
     )
 }
