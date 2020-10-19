@@ -10,7 +10,7 @@ export const Table = ({
     body,
     footer
 }) => {
-    if(body.length > 0) {
+    if(body && body.length > 0) {
         return (
             <table className="table">
                 <TableHead

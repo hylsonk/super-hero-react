@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Input = ({action, id, className, type = 'text', placeholder = ''}) => {
+export const Input = ({ value, action, id, className, type = 'text', placeholder = ''}) => {
     return (
         <input
             id={id}
@@ -8,6 +8,7 @@ export const Input = ({action, id, className, type = 'text', placeholder = ''}) 
             onChange={action}
             placeholder={placeholder}
             className={className}
+            value={value}
         />
     )
 }

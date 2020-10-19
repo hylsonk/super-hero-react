@@ -2,7 +2,7 @@ import React from 'react';
 import { Input } from '../../atoms';
 import { labels } from '../../../utils/labels';
 
-export const InputSearch = ({action, id, className}) => {
+export const InputSearch = ({value, action, id, className}) => {
     return(
         <Input 
             type='text'
@@ -10,6 +10,7 @@ export const InputSearch = ({action, id, className}) => {
             action= {action}
             id={id}
             className={className}
+            value={value}
         />
     )
 }
