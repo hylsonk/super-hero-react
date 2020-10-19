@@ -5,6 +5,7 @@ import {
 import {
     Title
 } from '../../atoms/';
+import { mappingPowerstats } from './mapping';
 
 export const Powerstats = ({
     powerstats
@@ -18,7 +19,7 @@ export const Powerstats = ({
                 text='Powerstats'
             />
             <Details 
-                detailsList={['a','b']}
+                detailsList={mappingPowerstats(powerstats)}
             />
         </div>  
     )

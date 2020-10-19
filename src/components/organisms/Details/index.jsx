@@ -11,12 +11,12 @@ export const Details = ({
             {detailsList.map((detail,index) => (
                 <LabelText
                     key={index}
-                    idLabel=''
-                    idText=''
-                    classNameText=''
-                    classNameLabel=''
-                    label='Label:'
-                    text='Text'
+                    idLabel={detail.idLabel}
+                    idText={detail.idText}
+                    classNameText={detail.classNameText}
+                    classNameLabel={detail.classNameLabel}
+                    label={detail.label}
+                    text={detail.text}
                 />
             ))}
         </div>

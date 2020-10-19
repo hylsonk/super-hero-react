@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import api from '../services/api';
-import { ChracterList } from '../components/pages/';
+import { 
+    // ChracterList,
+    ChracterDetails
+} from '../components/pages/';
 
 export default function App() {
     
@@ -10,7 +13,7 @@ export default function App() {
 
     return (
         <Router>
-          <ChracterList/>
+          <ChracterDetails/>
         </Router>
     )
 }

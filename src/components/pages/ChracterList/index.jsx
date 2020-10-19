@@ -3,8 +3,7 @@ import {
     InputSearch
 } from '../../molecules/';
 import {
-    Table,
-    Powerstats
+    Table
 } from '../../organisms/';
 import { columnsChracter } from '../../../utils/constants';
 
@@ -178,7 +177,6 @@ export const ChracterList = () => {
                     mock.map(char=>([char.id, char.name]))
                 }
             />
-            <Powerstats/>
         </div>
     )
 }

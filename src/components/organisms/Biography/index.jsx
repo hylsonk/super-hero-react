@@ -5,9 +5,10 @@ import {
 import {
     Title
 } from '../../atoms/';
+import { mappingBiography } from './mapping';
 
 export const Biography = ({
-    powerstats
+    biography
 }) => {
     return(
         <div>
@@ -18,7 +19,7 @@ export const Biography = ({
                 text='Biography'
             />
             <Details 
-                detailsList={['a','b']}
+                detailsList={mappingBiography(biography)}
             />
         </div>  
     )

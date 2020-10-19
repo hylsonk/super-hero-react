@@ -5,9 +5,10 @@ import {
 import {
     Title
 } from '../../atoms/';
+import { mappingAppearance } from './mapping';
 
 export const Appearance = ({
-    powerstats
+    appearance
 }) => {
     return(
         <div>
@@ -18,7 +19,7 @@ export const Appearance = ({
                 text='Appearance'
             />
             <Details 
-                detailsList={['a','b']}
+                detailsList={mappingAppearance(appearance)}
             />
         </div>  
     )

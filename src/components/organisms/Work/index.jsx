@@ -5,9 +5,10 @@ import {
 import {
     Title
 } from '../../atoms/';
+import { mappingWork } from './mapping';
 
 export const Work = ({
-    powerstats
+    work
 }) => {
     return(
         <div>
@@ -18,7 +19,7 @@ export const Work = ({
                 text='Work'
             />
             <Details 
-                detailsList={['a','b']}
+                detailsList={mappingWork(work)}
             />
         </div>  
     )
