@@ -1,4 +1,10 @@
 export const columnsChracter = [
     '#ID',
-    'Chracter Name'
+    'Character Name',
+    'Intelligence',
+    'Strength',
+    'Speed',
+    'Durability',
+    'Power',
+    'Combat'
 ]

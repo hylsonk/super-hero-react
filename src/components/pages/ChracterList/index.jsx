@@ -5,6 +5,7 @@ import {
 import {
     Table
 } from '../../organisms/';
+import { mappingToTable} from './mapping';
 import { columnsChracter } from '../../../utils/constants';
 
 export const ChracterList = () => {
@@ -175,9 +176,7 @@ export const ChracterList = () => {
             />
             <Table
                 head={columnsChracter}
-                body={
-                    mock.map(char=>([char.id, char.name]))
-                }
+                body={mappingToTable(mock)}
             />
         </div>
     )
