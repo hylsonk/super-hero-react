@@ -6,6 +6,9 @@ import {
     Work,
     Connections,
 } from '../../organisms/';
+import {
+    Image
+} from '../../atoms/'
 
 export const ChracterDetails = () => {
 
@@ -60,6 +63,9 @@ export const ChracterDetails = () => {
 
     return (
         <div className='container'>
+            <Image
+                url={mock.image.url}
+            />
             <Powerstats 
                 powerstats={mock.powerstats}
             />
