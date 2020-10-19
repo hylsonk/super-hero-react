@@ -15,7 +15,7 @@ export default function App() {
         <Router>
           <Switch>
               <Route path='/' exact={true} component={ChracterList}/>
-              <Route path='/details/:id ' component={ChracterDetails}/>
+              <Route path='/details/:id' component={ChracterDetails}/>
           </Switch>
         </Router>
     )
