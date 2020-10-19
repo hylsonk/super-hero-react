@@ -21,8 +21,8 @@ export const mappingAppearance = (appearance) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'heigth',
-            text: appearance.heigth
+            label: 'height',
+            text: appearance.height
         },
         {
             idLabel: '',
