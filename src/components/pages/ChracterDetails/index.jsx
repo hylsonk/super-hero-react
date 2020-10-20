@@ -7,7 +7,8 @@ import {
     Connections,
 } from '../../organisms/';
 import {
-    Image
+    Image,
+    Spinner
 } from '../../atoms/';
 
 import { get } from '../../../services/integrations'
@@ -15,17 +16,21 @@ import { get } from '../../../services/integrations'
 export const ChracterDetails = ({ match }) => {
 
     const [chracter, setChracter] = useState();
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
             const char = await get(match.params.id)
             setChracter(char.data)
+            setIsLoading(false)
         })()
     }, []);
 
     return (
         <div className='container'>
-            {View(chracter)}
+            {isLoading ? (
+                <Spinner/>
+            ) : View(chracter)}
         </div>
     )
 }
