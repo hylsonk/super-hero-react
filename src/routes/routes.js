@@ -21,11 +21,8 @@ export default function App() {
     )
 }
 
-export const load = () =>{
-    api.get('70')
-        .then((response) => console.log(response))
-        .catch((err) => {
-            console.error(err);
-        });
+export const load = async () =>{
+    const result = await api.get('70');
+    console.log(result)
 }
 
