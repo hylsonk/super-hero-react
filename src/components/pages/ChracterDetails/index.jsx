@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Biography,
     Powerstats,
@@ -8,9 +8,20 @@ import {
 } from '../../organisms/';
 import {
     Image
-} from '../../atoms/'
+} from '../../atoms/';
 
-export const ChracterDetails = () => {
+import api from '../../../services/api';
+
+export const ChracterDetails = ({match}) => {
+
+    const [chracter, setChracter] = useState();
+
+    useEffect(() => {
+        (async () => {
+            const char = await get(match.params.id)
+            setChracter(char.data)
+        })()
+      }, []);
 
     const mock = {
         "id": "1",
@@ -61,6 +72,8 @@ export const ChracterDetails = () => {
         }
     }
 
+    console.log(chracter)
+
     return (
         <div className='container'>
             <Image
@@ -83,6 +96,11 @@ export const ChracterDetails = () => {
             />
         </div>
     )
+}
+
+export const get = async (i) =>{
+    const result = await api.get(`${i}`);
+    return result;
 }
 
 export default ChracterDetails;
