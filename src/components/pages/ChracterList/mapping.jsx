@@ -1,3 +1,7 @@
+import React from 'react';  
+import {
+    Link
+} from '../../atoms/';
 export const mappingToTable = (chracterList) => {
     return chracterList.map(char => ([
         char.id,
@@ -8,5 +12,9 @@ export const mappingToTable = (chracterList) => {
         char.powerstats.durability,
         char.powerstats.power,
         char.powerstats.combat,
+        <Link 
+            url={`${process.env.REACT_APP_URL}details/${char.id}`}
+            children='Detalhes'
+        />
     ]))
 }
