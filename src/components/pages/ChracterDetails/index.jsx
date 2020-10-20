@@ -64,8 +64,6 @@ export const View = (chracter) => {
                 />
             </div>
         )
-    } else {
-        return ("Loading...")
     }
 }
 
