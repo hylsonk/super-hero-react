@@ -20,7 +20,7 @@ export const ChracterList = () => {
 
   useEffect(() => {
     (async () => {
-      setChracterList(await makeList(0, 15));
+      setChracterList(await makeList(0, 5));
       setIsLoading(false)
     })();
   }, []);
@@ -51,17 +51,16 @@ export const onClickSearch = async (searchValue, set) => {
   if (searchValue) {
     const resolve = await get(`search/${searchValue}`);
     result = resolve.data.results;
-  } else {
-    result = makeList(0, 10);
   }
   set(result)
 }
 
 export const makeList = async (page, limit) => {
   let status = '';
-  let first = page * limit;
+  const first = page * limit;
   let count = (page * limit) + 1;
   let list = [];
+  const limited = (first + limit);
   do {
     let resolve = await get(`${count}`);
     status = resolve.data.response;
@@ -69,7 +68,7 @@ export const makeList = async (page, limit) => {
       list.push(resolve.data)
       count++;
     }
-  } while ((status === "success" && count <= first + limit))
+  } while ((status === "success" && count <= limited ))
   return list
 }
 
