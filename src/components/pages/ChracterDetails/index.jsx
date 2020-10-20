@@ -8,7 +8,8 @@ import {
 } from '../../organisms/';
 import {
     Image,
-    Spinner
+    Spinner,
+    Link
 } from '../../atoms/';
 
 import { get } from '../../../services/integrations'
@@ -28,6 +29,10 @@ export const ChracterDetails = ({ match }) => {
 
     return (
         <div className='container'>
+            <Link 
+               url={`${process.env.REACT_APP_URL}`}
+               children='Voltar' 
+            />
             {isLoading ? (
                 <Spinner/>
             ) : View(chracter)}
