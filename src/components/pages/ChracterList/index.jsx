@@ -47,16 +47,18 @@ export const get = async (i) =>{
 }
 
 export const makeList = async(page,limit) => {
-  let status = 200;
+  let status = '';
   let first= page*limit;
   let count= (page*limit)+1;
   let list = [];
-  while (status === 200 && count <= first+limit){
+  do {
     let resolve = await get(count);
-    status = resolve.status;
-    list.push(resolve.data)
-    count++;
-  }
+    status = resolve.data.response;
+    if(resolve.data.response === "success"){
+      list.push(resolve.data)
+      count++;
+    }
+  } while((status === "success" && count <= first+limit))
   return list
 }
 
