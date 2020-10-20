@@ -7,7 +7,7 @@ import {
 } from '../../organisms/';
 import { mappingToTable} from './mapping';
 import { columnsChracter } from '../../../utils/constants';
-import api from '../../../services/api';
+import { get } from '../../../services/integrations';
 
 export const ChracterList = () => {
 
@@ -31,7 +31,7 @@ export const ChracterList = () => {
                 id='search'
                 value={searchValue}
                 label="Search"
-                onClick={e=> console.log('CLICK')}
+                onClick={()=> onClickSearch(searchValue, setChracterList)}
             />
             <Table
                 head={columnsChracter}
@@ -41,9 +41,15 @@ export const ChracterList = () => {
     )
 }
 
-export const get = async (i) =>{
-    const result = await api.get(`${i}`);
-    return result;
+export const onClickSearch = async (searchValue, set) => {
+  let result = [];
+  if(searchValue) {
+    const resolve = await get(`search/${searchValue}`);
+    result = resolve.data.results;
+  } else {
+    result = makeList(0,10);
+  }
+   set(result)
 }
 
 export const makeList = async(page,limit) => {
@@ -52,7 +58,7 @@ export const makeList = async(page,limit) => {
   let count= (page*limit)+1;
   let list = [];
   do {
-    let resolve = await get(count);
+    let resolve = await get(`${count}`);
     status = resolve.data.response;
     if(resolve.data.response === "success"){
       list.push(resolve.data)

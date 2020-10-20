@@ -10,7 +10,7 @@ import {
     Image
 } from '../../atoms/';
 
-import api from '../../../services/api';
+import { get } from '../../../services/integrations'
 
 export const ChracterDetails = ({ match }) => {
 
@@ -57,11 +57,6 @@ export const View = (chracter) => {
     } else {
         return ("Loading...")
     }
-}
-
-export const get = async (i) => {
-    const result = await api.get(`${i}`);
-    return result;
 }
 
 export default ChracterDetails;
