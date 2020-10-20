@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import api from '../services/api';
 import { 
     ChracterList,
     ChracterDetails
@@ -8,9 +7,6 @@ import {
 
 export default function App() {
     
-    load()
-    
-
     return (
         <Router>
           <Switch>
@@ -19,10 +15,5 @@ export default function App() {
           </Switch>
         </Router>
     )
-}
-
-export const load = async () =>{
-    const result = await api.get('70');
-    console.log(result)
 }
 
