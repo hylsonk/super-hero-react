@@ -8,6 +8,9 @@ export const Spinner = () => {
             color="black"
             height={100}
             width={100}
+            style={{
+                textAlign: 'center'
+            }}
         />
     )
 }
