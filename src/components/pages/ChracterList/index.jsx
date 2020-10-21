@@ -28,6 +28,8 @@ export const ChracterList = () => {
   return (
     <div className='container'>
       <div className="level navbar">
+        <div className='level-left'>
+        </div>
         <div className='level-right'>
           <div className='level-item'>
             <InputSearch
@@ -42,16 +44,20 @@ export const ChracterList = () => {
       </div>
       <div className='columns'>
         <div className='column'>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-          <Table
-            head={columnsChracter}
-            body={mappingToTable(chracterList)}
-          />
-        )}
+          {isLoading ? (
+            <div className='columns is-centered'>
+              <Spinner />
+            </div>
+          ) : (
+              <div className='block'>
+                <Table
+                  head={columnsChracter}
+                  body={mappingToTable(chracterList)}
+                />
+              </div>
+            )}
         </div>
-        </div>
+      </div>
     </div>
   )
 }

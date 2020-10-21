@@ -4,7 +4,7 @@ export const mappingWork = (work) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel: "label",
             label: 'Occupation:',
             text: work.occupation
         },
@@ -12,7 +12,7 @@ export const mappingWork = (work) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel: "label",
             label: 'Base:',
             text: work.base
         }

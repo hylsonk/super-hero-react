@@ -4,7 +4,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:"label",
             label: 'Gender:',
             text: appearance.gender
         },
@@ -12,7 +12,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:"label",
             label: 'Race:',
             text: appearance.race
         },
@@ -20,7 +20,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:"label",
             label: 'Height:',
             text: appearance.height.join('/ ')
         },
@@ -28,7 +28,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:"label",
             label: 'Weight:',
             text: appearance.weight.join('/ ')
         },
@@ -36,7 +36,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:" ",
             label: 'Eye Color:',
             text: appearance['eye-color']
         },
@@ -44,7 +44,7 @@ export const mappingAppearance = (appearance) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel:"label",
             label: 'Hair Color:',
             text: appearance['hair-color']
         },

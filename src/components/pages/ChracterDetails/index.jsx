@@ -39,7 +39,7 @@ export const ChracterDetails = ({ match }) => {
                     </div>
                 </div>
             </div>
-            <div className='box'>
+            <div className='block'>
                 {isLoading ? (
                     <div className='columns is-centered'>
                         <Spinner />

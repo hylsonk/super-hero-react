@@ -4,7 +4,7 @@ export const mappingConnections = (connections) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel: "label",
             label: 'Group Affiliation:',
             text: connections['group-affiliation']
         },
@@ -12,7 +12,7 @@ export const mappingConnections = (connections) => {
             idLabel: '',
             idText: '',
             classNameText: '',
-            classNameLabel: '',
+            classNameLabel: "label",
             label: 'Relatives:',
             text: connections.relatives
         }
