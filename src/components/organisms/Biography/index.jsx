@@ -14,7 +14,7 @@ export const Biography = ({
         <div>
             <Title
                 id=''
-                className=''
+                className='title'
                 type='h1'
                 text='Biography'
             />

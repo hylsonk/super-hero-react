@@ -6,18 +6,20 @@ import {
 export const Details = ({
     detailsList = []
 }) => {
-    return(
-        <div>
-            {detailsList.map((detail,index) => (
-                <LabelText
-                    key={index}
-                    idLabel={detail.idLabel}
-                    idText={detail.idText}
-                    classNameText={detail.classNameText}
-                    classNameLabel={detail.classNameLabel}
-                    label={detail.label}
-                    text={detail.text}
-                />
+    return (
+        <div className="columns">
+            {detailsList.map((detail, index) => (
+                <div className='column'>
+                    <LabelText
+                        key={index}
+                        idLabel={detail.idLabel}
+                        idText={detail.idText}
+                        classNameText={detail.classNameText}
+                        classNameLabel={detail.classNameLabel}
+                        label={detail.label}
+                        text={detail.text}
+                    />
+                </div>
             ))}
         </div>
     )

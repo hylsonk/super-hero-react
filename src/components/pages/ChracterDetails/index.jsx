@@ -29,12 +29,12 @@ export const ChracterDetails = ({ match }) => {
 
     return (
         <div className='container'>
-            <Link 
-               url={`${process.env.REACT_APP_URL}`}
-               children='Voltar' 
+            <Link
+                url={`${process.env.REACT_APP_URL}`}
+                children='< Voltar'
             />
             {isLoading ? (
-                <Spinner/>
+                <Spinner />
             ) : View(chracter)}
         </div>
     )
@@ -44,24 +44,44 @@ export const View = (chracter) => {
     if (chracter) {
         return (
             <div>
-                <Image
-                    url={chracter.image.url}
-                />
-                <Powerstats
-                    powerstats={chracter.powerstats}
-                />
-                <Biography
-                    biography={chracter.biography}
-                />
-                <Appearance
-                    appearance={chracter.appearance}
-                />
-                <Work
-                    work={chracter.work}
-                />
-                <Connections
-                    connections={chracter.connections}
-                />
+                <div className="columns is-desktop">
+                    <div className="column is-one-quarter">
+                        <Image
+                            url={chracter.image.url}
+                            className="image is-3by4"
+                        />
+                    </div>
+                    <div className="column">
+                        <Powerstats
+                            powerstats={chracter.powerstats}
+                        />
+                        <Biography
+                            biography={chracter.biography}
+                        />
+                    </div>
+                </div>
+                <div className="columns is-desktop">
+                    {/* <div className="column">
+                        <Biography
+                            biography={chracter.biography}
+                        />
+                    </div> */}
+                    <div className="column">
+                        <Appearance
+                            appearance={chracter.appearance}
+                        />
+                    </div>
+                    <div className="column">
+                        <Work
+                            work={chracter.work}
+                        />
+                    </div>
+                    <div className="column">
+                        <Connections
+                            connections={chracter.connections}
+                        />
+                    </div>
+                </div>
             </div>
         )
     }

@@ -14,7 +14,7 @@ export const Appearance = ({
         <div>
             <Title
                 id=''
-                className=''
+                className='title'
                 type='h1'
                 text='Appearance'
             />
