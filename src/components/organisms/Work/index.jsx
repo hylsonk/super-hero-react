@@ -11,7 +11,7 @@ export const Work = ({
     work
 }) => {
     return(
-        <div>
+        <div className='section'>
             <Title
                 id=''
                 className='title'

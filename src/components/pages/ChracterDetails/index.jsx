@@ -29,13 +29,21 @@ export const ChracterDetails = ({ match }) => {
 
     return (
         <div className='container'>
-            <Link
-                url={`${process.env.REACT_APP_URL}`}
-                children='< Voltar'
-            />
-            {isLoading ? (
-                <Spinner />
-            ) : View(chracter)}
+            <div className="level navbar">
+                <div className="level-left">
+                    <div className='level-item'>
+                        <Link
+                            url={`${process.env.REACT_APP_URL}`}
+                            children='< Voltar'
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className='box'>
+                {isLoading ? (
+                    <Spinner />
+                ) : View(chracter)}
+            </div>
         </div>
     )
 }
@@ -55,27 +63,27 @@ export const View = (chracter) => {
                         <Powerstats
                             powerstats={chracter.powerstats}
                         />
+
                         <Biography
                             biography={chracter.biography}
                         />
                     </div>
                 </div>
-                <div className="columns is-desktop">
-                    {/* <div className="column">
-                        <Biography
-                            biography={chracter.biography}
-                        />
-                    </div> */}
+                <div className="columns">
                     <div className="column">
                         <Appearance
                             appearance={chracter.appearance}
                         />
                     </div>
+                </div>
+                <div className="columns">
                     <div className="column">
                         <Work
                             work={chracter.work}
                         />
                     </div>
+                </div>
+                <div className="columns">
                     <div className="column">
                         <Connections
                             connections={chracter.connections}

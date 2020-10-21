@@ -11,7 +11,7 @@ export const Connections = ({
     connections
 }) => {
     return(
-        <div>
+        <div className='section '>
             <Title
                 id=''
                 className='title'

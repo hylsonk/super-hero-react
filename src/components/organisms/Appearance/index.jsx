@@ -11,7 +11,7 @@ export const Appearance = ({
     appearance
 }) => {
     return(
-        <div>
+        <div className='section'>
             <Title
                 id=''
                 className='title'

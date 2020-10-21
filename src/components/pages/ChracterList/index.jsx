@@ -27,7 +27,7 @@ export const ChracterList = () => {
 
   return (
     <div className='container'>
-      <nav className="level">
+      <div className="level navbar">
         <div className='level-right'>
           <div className='level-item'>
             <InputSearch
@@ -39,7 +39,7 @@ export const ChracterList = () => {
             />
           </div>
         </div>
-      </nav>
+      </div>
       <div className='columns'>
         <div className='column'>
       {isLoading ? (
