@@ -12,7 +12,7 @@ export const Table = ({
 }) => {
     if(body && body.length > 0) {
         return (
-            <table className="table">
+            <table className="table is-striped is-bordered is-fullwidth">
                 <TableHead
                     columns={head}
                 />

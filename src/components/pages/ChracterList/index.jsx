@@ -27,13 +27,21 @@ export const ChracterList = () => {
 
   return (
     <div className='container'>
-      <InputSearch
-        onChange={e => setSearchValue(e.target.value)}
-        id='search'
-        value={searchValue}
-        label="Search"
-        onClick={() => onClickSearch(searchValue, setChracterList)}
-      />
+      <nav className="level">
+        <div className='level-right'>
+          <div className='level-item'>
+            <InputSearch
+              onChange={e => setSearchValue(e.target.value)}
+              id='search'
+              value={searchValue}
+              label="Search"
+              onClick={() => onClickSearch(searchValue, setChracterList)}
+            />
+          </div>
+        </div>
+      </nav>
+      <div className='columns'>
+        <div className='column'>
       {isLoading ? (
         <Spinner />
       ) : (
@@ -42,6 +50,8 @@ export const ChracterList = () => {
             body={mappingToTable(chracterList)}
           />
         )}
+        </div>
+        </div>
     </div>
   )
 }
@@ -68,7 +78,7 @@ export const makeList = async (page, limit) => {
       list.push(resolve.data)
       count++;
     }
-  } while ((status === "success" && count <= limited ))
+  } while ((status === "success" && count <= limited))
   return list
 }
 
