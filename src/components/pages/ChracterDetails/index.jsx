@@ -41,7 +41,9 @@ export const ChracterDetails = ({ match }) => {
             </div>
             <div className='box'>
                 {isLoading ? (
-                    <Spinner />
+                    <div className='columns is-centered'>
+                        <Spinner />
+                    </div>
                 ) : View(chracter)}
             </div>
         </div>
