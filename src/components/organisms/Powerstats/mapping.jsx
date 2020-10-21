@@ -5,7 +5,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'Intelligence',
+            label: 'Intelligence:',
             text: powerstats.intelligence
         },
         {
@@ -13,7 +13,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'Strength',
+            label: 'Strength:',
             text: powerstats.strength
         },
         {
@@ -21,7 +21,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'speed',
+            label: 'Speed:',
             text: powerstats.speed
         },
         {
@@ -29,7 +29,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'durability',
+            label: 'Durability:',
             text: powerstats.durability
         },
         {
@@ -37,7 +37,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'power',
+            label: 'Power:',
             text: powerstats.power
         },
         {
@@ -45,7 +45,7 @@ export const mappingPowerstats = (powerstats) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'combat',
+            label: 'Combat:',
             text: powerstats.combat
         },
     ]

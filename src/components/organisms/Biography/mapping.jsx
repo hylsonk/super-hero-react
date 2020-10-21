@@ -5,7 +5,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'full-name',
+            label: 'Full Name:',
             text: biography['full-name']
         },
         {
@@ -13,7 +13,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'alter-egos',
+            label: 'Alter egos:',
             text: biography['alter-egos']
         },
         {
@@ -21,7 +21,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'place-of-birth',
+            label: 'Place of birth:',
             text: biography['place-of-birth']
         },
         {
@@ -29,7 +29,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'first-appearance',
+            label: 'First Appearance:',
             text: biography['first-appearance']
         },
         {
@@ -37,7 +37,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'publisher',
+            label: 'Publisher:',
             text: biography.publisher
         },
         {
@@ -45,7 +45,7 @@ export const mappingBiography = (biography) => {
             idText: '',
             classNameText: '',
             classNameLabel: '',
-            label: 'alignment',
+            label: 'Alignment:',
             text: biography.alignment
         },
     ]
