@@ -20,12 +20,8 @@ export const ChracterDetails = ({ match }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        (async () => {
-            const char = await get(match.params.id)
-            setChracter(char.data)
-            setIsLoading(false)
-        })()
-    }, []);
+        startPage(setChracter, setIsLoading, match.params.id)
+    }, [match.params.id]);
 
     return (
         <div className='container'>
@@ -49,6 +45,12 @@ export const ChracterDetails = ({ match }) => {
         </div>
     )
 }
+
+export const startPage = async (setChracter, setIsLoading, id) => {
+    const char = await get(id)
+    setChracter(char.data)
+    setIsLoading(false)
+  }
 
 export const View = (chracter) => {
     if (chracter) {

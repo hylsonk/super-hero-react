@@ -19,10 +19,7 @@ export const ChracterList = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      setChracterList(await makeList(0, 5));
-      setIsLoading(false)
-    })();
+    startPage(setChracterList, setIsLoading);
   }, []);
 
   return (
@@ -45,9 +42,7 @@ export const ChracterList = () => {
       <div className='columns'>
         <div className='column'>
           {isLoading ? (
-            <div className='columns is-centered'>
               <Spinner />
-            </div>
           ) : (
               <div className='block'>
                 <Table
@@ -58,8 +53,13 @@ export const ChracterList = () => {
             )}
         </div>
       </div>
-    </div>
+    </div >
   )
+}
+
+export const startPage = async (setChracterList, setIsLoading) => {
+  setChracterList(await makeList(0, 5));
+  setIsLoading(false)
 }
 
 export const onClickSearch = async (searchValue, set) => {
