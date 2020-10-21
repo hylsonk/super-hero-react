@@ -12,7 +12,7 @@ import {
     Link
 } from '../../atoms/';
 
-import { get } from '../../../services/integrations'
+import { get } from '../../../services/integrations';
 
 export const ChracterDetails = ({ match }) => {
 

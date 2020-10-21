@@ -9,9 +9,8 @@ export const Details = ({
     return (
         <div className="columns">
             {detailsList.map((detail, index) => (
-                <div className='column'>
+                <div className='column' key={index}>
                     <LabelText
-                        key={index}
                         idLabel={detail.idLabel}
                         idText={detail.idText}
                         classNameText={detail.classNameText}
