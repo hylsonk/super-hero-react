@@ -10,12 +10,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    display: flex;
     min-height: 100vh;
     height: auto;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
   }
 
   .head {

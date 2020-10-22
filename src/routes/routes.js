@@ -26,12 +26,7 @@ export default function App() {
             setTheme(darkTheme);
             setThemeText('Dark');
         }
-    },[])
-
-    useEffect(()=> {
-        setTheme(toggleTheme ? lightTheme : darkTheme);
-        setThemeText(toggleTheme ? 'Light' : 'Dark');
-    },[toggleTheme]);
+    },[toggleTheme])
 
     return (
         <ThemeProvider theme={theme}>
