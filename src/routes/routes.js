@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { GlobalStyles } from "../styles/globals";
-import { useLocalStorage, getLocalStorage } from '../store/localStorage'
+import { useLocalStorage } from '../store/localStorage'
 import {
     ChracterList,
     ChracterDetails

@@ -42,4 +42,9 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-weight: bold
   }
+
+  .button {
+    background: ${({ theme }) => theme.button};
+  }
+
   `;

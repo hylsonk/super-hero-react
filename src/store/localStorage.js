@@ -24,8 +24,3 @@ export const useLocalStorage = (key, initialValue) => {
 
     return [storedValue, setValue];
 };
-
-export const getLocalStorage = (key) => {
-
-    return localStorage.getItem(key);
-}
