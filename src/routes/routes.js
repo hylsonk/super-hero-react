@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { GlobalStyles } from "../styles/globals";
+import { useLocalStorage, getLocalStorage } from '../store/localStorage'
 import {
     ChracterList,
     ChracterDetails
@@ -14,8 +15,18 @@ import {
 export default function App() {
     
     const [theme, setTheme] = useState(lightTheme);
-    const [toggleTheme, setToggleTheme] = useState(true);
+    const [toggleTheme, setToggleTheme] = useLocalStorage('lightMode', true);
     const [themeText, setThemeText] = useState('Light');
+
+    useEffect(() => {
+        if(toggleTheme) {
+            setTheme(lightTheme);
+            setThemeText('Light');
+        } else {
+            setTheme(darkTheme);
+            setThemeText('Dark');
+        }
+    },[])
 
     useEffect(()=> {
         setTheme(toggleTheme ? lightTheme : darkTheme);

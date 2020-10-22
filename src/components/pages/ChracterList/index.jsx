@@ -24,10 +24,6 @@ export const ChracterList = () => {
 
   return (
     <div className='container'>
-      {/* <div class="field">
-        <input id="switchColorDefault" type="checkbox" name="switchColorDefault" class="switch" checked="checked" />
-        <label for="switchColorDefault">Switch default</label>
-      </div> */}
       <div className="level navbar head">
         <div className='level-left'>
         </div>
@@ -39,6 +35,8 @@ export const ChracterList = () => {
               value={searchValue}
               label="Search"
               onClick={() => onClickSearch(searchValue, setChracterList, setIsLoading)}
+              className='input'
+              classNameButton='button'
             />
           </div>
         </div>
