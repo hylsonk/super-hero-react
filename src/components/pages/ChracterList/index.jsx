@@ -24,7 +24,7 @@ export const ChracterList = () => {
 
   return (
     <div className='container'>
-      <div className="level navbar">
+      <div className="level navbar head">
         <div className='level-left'>
         </div>
         <div className='level-right'>
@@ -34,7 +34,7 @@ export const ChracterList = () => {
               id='search'
               value={searchValue}
               label="Search"
-              onClick={() => onClickSearch(searchValue, setChracterList)}
+              onClick={() => onClickSearch(searchValue, setChracterList, setIsLoading)}
             />
           </div>
         </div>
@@ -62,13 +62,18 @@ export const startPage = async (setChracterList, setIsLoading) => {
   setIsLoading(false)
 }
 
-export const onClickSearch = async (searchValue, set) => {
+export const onClickSearch = async (searchValue, set, setIsLoading) => {
   let result = [];
   if (searchValue) {
+    setIsLoading(true);
     const resolve = await get(`search/${searchValue}`);
     result = resolve.data.results;
   }
-  set(result)
+
+  if(result && result.length > 0) {
+    set(result) 
+  }
+  setIsLoading(false);
 }
 
 export const makeList = async (page, limit) => {

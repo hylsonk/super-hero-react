@@ -13,7 +13,7 @@ export const Table = ({
     if (body && body.length > 0) {
         return (
             <div className='table-container'>
-                <table className="table is-striped is-bordered is-fullwidth">
+                <table className="table is-bordered is-fullwidth">
                     <TableHead
                         columns={head}
                     />

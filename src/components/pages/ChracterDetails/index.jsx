@@ -25,7 +25,7 @@ export const ChracterDetails = ({ match }) => {
 
     return (
         <div className='container'>
-            <div className="level navbar">
+            <div className="level navbar head">
                 <div className="level-left">
                     <div className='level-item'>
                         <Link
