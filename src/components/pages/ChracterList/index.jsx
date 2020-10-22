@@ -24,6 +24,10 @@ export const ChracterList = () => {
 
   return (
     <div className='container'>
+      {/* <div class="field">
+        <input id="switchColorDefault" type="checkbox" name="switchColorDefault" class="switch" checked="checked" />
+        <label for="switchColorDefault">Switch default</label>
+      </div> */}
       <div className="level navbar head">
         <div className='level-left'>
         </div>
@@ -42,7 +46,7 @@ export const ChracterList = () => {
       <div className='columns'>
         <div className='column'>
           {isLoading ? (
-              <Spinner />
+            <Spinner />
           ) : (
               <div className='block'>
                 <Table
@@ -70,8 +74,8 @@ export const onClickSearch = async (searchValue, set, setIsLoading) => {
     result = resolve.data.results;
   }
 
-  if(result && result.length > 0) {
-    set(result) 
+  if (result && result.length > 0) {
+    set(result)
   }
   setIsLoading(false);
 }

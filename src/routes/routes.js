@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../styles/theme";
@@ -8,19 +8,29 @@ import {
     ChracterDetails
 } from '../components/pages/';
 import {
-    Button
-} from '../components/atoms/';
+    LabelToggle
+} from '../components/molecules/';
 
 export default function App() {
     
     const [theme, setTheme] = useState(lightTheme);
+    const [toggleTheme, setToggleTheme] = useState(true);
+    const [themeText, setThemeText] = useState('Light');
+
+    useEffect(()=> {
+        setTheme(toggleTheme ? lightTheme : darkTheme);
+        setThemeText(toggleTheme ? 'Light' : 'Dark');
+    },[toggleTheme]);
 
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles/>
-            <Button
-                onClick={() => chooseTheme(theme, setTheme)}
-                label='Change mode'
+            <LabelToggle
+                label={themeText}
+                checked={toggleTheme}
+                idToggle='theme'
+                forLabel='theme'
+                onChange={() => setToggleTheme(!toggleTheme)}
             />
             <Router>
                 <Switch>
@@ -30,8 +40,4 @@ export default function App() {
             </Router>
         </ThemeProvider>
     )
-}
-
-export const chooseTheme = (theme, setTheme) => {
-    setTheme(theme === lightTheme ? darkTheme : lightTheme)
 }
