@@ -37,6 +37,7 @@ export default function App() {
                 idToggle='theme'
                 forLabel='theme'
                 onChange={() => setToggleTheme(!toggleTheme)}
+                classNameLabel='label'
             />
             <Router>
                 <Switch>

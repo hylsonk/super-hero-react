@@ -43,4 +43,12 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.button};
   }
 
+  a:active {
+    color: ${({ theme }) => theme.linkActive};
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.linkHover};
+  }
+
   `;
