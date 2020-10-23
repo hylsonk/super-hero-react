@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  InputSearch,
-  Favorite
+  InputSearch
 } from '../../molecules/';
 import {
   Table
@@ -61,7 +60,7 @@ export const ChracterList = () => {
 }
 
 export const startPage = async (setChracterList, setIsLoading) => {
-  setChracterList(await makeList(0, 5));
+  setChracterList(await makeList(0, 750));
   setIsLoading(false)
 }
 
