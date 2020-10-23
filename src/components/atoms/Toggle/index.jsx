@@ -3,7 +3,7 @@ export const Toggle = ({
     onChange,
     checked,
     id = '',
-    className='switch is-rounded is-info'
+    className='switch is-rounded'
 }) => {
     return (
         <input
