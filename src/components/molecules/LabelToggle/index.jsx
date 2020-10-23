@@ -15,7 +15,12 @@ export const LabelToggle = ({
     forLabel
 }) => {
     return(
-        <div className='field'>
+        <div className="level navbar head">
+        <div className='level-left'>
+        </div>
+        <div className='level-right'>
+          <div className='level-item'>
+          <div className='field'>
             <Toggle 
                 id={idToggle}
                 className={classNameToggle}
@@ -29,7 +34,10 @@ export const LabelToggle = ({
                 forLabel={forLabel}
             />
         </div>
-    )
+          </div>
+        </div>
+      </div>
+        )
 }
 
 export default LabelToggle;
