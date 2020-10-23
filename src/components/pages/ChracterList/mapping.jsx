@@ -14,7 +14,7 @@ export const mappingToTable = (chracterList) => {
         char.powerstats.combat,
         <Link 
             url={`${process.env.REACT_APP_URL}details/${char.id}`}
-            children='Detalhes'
+            children='Detail'
         />
     ]))
 }
