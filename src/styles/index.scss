@@ -19,3 +19,9 @@ code {
 .table-container {
   padding-bottom: 1px;
 }
+
+.iconButton:focus, .iconButton {
+  border: none;
+  background: transparent;
+  outline: none;
+}

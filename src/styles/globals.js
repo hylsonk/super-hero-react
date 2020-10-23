@@ -57,4 +57,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.linkHover};
   }
 
+  .iconBorder {
+    fill: ${({ theme }) => theme.text};
+  }
   `;

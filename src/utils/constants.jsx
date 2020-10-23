@@ -7,5 +7,6 @@ export const columnsChracter = [
     'Durability',
     'Power',
     'Combat',
-    'Details'
+    'Details',
+    'Favorite'
 ]
